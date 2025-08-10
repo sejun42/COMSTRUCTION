@@ -1,0 +1,3 @@
+depth_scale(meters_per_unit)=0.0005070000188425183
+filters=on
+stream=depth 1280x720@30, format=Z16
