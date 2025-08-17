@@ -1,0 +1,5 @@
+depth_scale(meters_per_unit)=0.0010000000474974513
+filters=on
+stream=depth 1280x720@30, format=Z16
+orig_size=360x640
+roi=x0:302,y0:132,size:199
