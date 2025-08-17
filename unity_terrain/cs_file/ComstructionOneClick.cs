@@ -98,6 +98,8 @@ public class ComstructionOneClick : EditorWindow
 
         await BuildFromLatestAsync();
 
+        ComstructionScatter.RunOneClickScatter();
+
         ShowTimedNotification("원클릭 완료", 1.5f);
     }
 
@@ -145,6 +147,7 @@ public class ComstructionOneClick : EditorWindow
         ApplyR16ToTerrain(r16);
         AssetDatabase.Refresh();
         ShowTimedNotification($"적용 완료: {Path.GetFileName(r16)}", 3f);
+        ComstructionScatter.RunOneClickScatter();
     }
 
 
@@ -280,3 +283,5 @@ public class ComstructionOneClick : EditorWindow
     }
 
 }
+
+
