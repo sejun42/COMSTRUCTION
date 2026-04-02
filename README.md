@@ -1,16 +1,68 @@
-# COMSTRUCTION PROJECT 🏗️
+# COMSTRUCTION - Mixed-Reality Sandbox Construction Simulator
 
-실제 모래사장과 뎁스카메라, Unity, VR을 연결한 XR 체험 콘텐츠입니다.
+**Bridging physical sand terrain with virtual 3D environments using depth cameras, Unity, and VR**
 
-COMSTRUCTION 순서도
-1.	체험자는 NxN의 모래사장에서 자유롭게 지형을 제작한다.
-2.	제작이 완료되었으면 뎁스카메라를 통해 모래사장의 뎁스를 촬영한다. 뎁스는 뎁스맵으로 저장된다.
-3.	뎁스맵을 통해 unity에서 3D지형을 생성한다.
-4.	3D 지형에 여러 오브젝트들을 랜덤으로 배치하여 좀 더 현실감 있게 맵을 생성한다.
-5.	2번부터 5번은 원클릭으로 진행된다.
-6.	체험자는 위치가 추적되는 장난감을 모래사장 중 랜덤한 위치에 배치한다. 
-7.	unity상에서 장난감이 위치한 곳에 캐릭터가 배치된다.
-8.	체험자는 VR기기를 통해 unity맵을 둘러볼 수 있다.
-9.	장난감을 조작하는 리모컨을 통해 장난감을 움직이고 조작하는데 그 변화가 unity상에서도 동기화되어 움직인다. 리모컨의 신호를 장난감과 컴퓨터 이렇게 두개로 분화해서 전송하고 컴퓨터는 이 신호를 받고 이를 unity상에 반영하여 체험자가 모래사장 위의 장난감을 움직이지만 실제 VR내에서도 움직이고 있다고 생각이 들게 한다.
-10.	지형을 따라 움직이거나 여러 물체를 실제로 옮기면 이 또한 unity상에서 반영된다.
-11.	체험자는 이를 통해 실제 공사장 또는 재난현장에 있는 것 같은 느낌을 느끼고 제3자도 함께 오프라인 오브젝트를 보며 체험할 수 있다.
+![Unity](https://img.shields.io/badge/Unity-2022.x-000000?logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-50.4%25-239120?logo=csharp)
+![Python](https://img.shields.io/badge/Python-44.3%25-3776AB?logo=python&logoColor=white)
+![Award](https://img.shields.io/badge/Award-Gyeonggi%20Content%20Agency-orange)
+
+---
+
+## Overview
+
+COMSTRUCTION is a **mixed-reality interactive experience** that synchronizes a real-world sandbox terrain with a Unity-based 3D virtual environment. Users sculpt physical sand, capture the depth profile with an Intel RealSense D455, and explore the generated virtual terrain through VR - complete with a remotely-controlled toy excavator whose movements are mirrored in the virtual world.
+
+### Key Features
+
+| Feature | Description |
+|---|---|
+| **Depth-to-Terrain Pipeline** | RealSense depth map to Unity heightmap conversion with ROI processing |
+| **Gaussian Stamping** | Terrain deformation algorithm for realistic virtual landscape from depth data |
+| **Physical-Virtual Sync** | UDP-based real-time synchronization of toy excavator with virtual counterpart |
+| **VR Exploration** | Full VR walkthrough of the generated terrain |
+| **One-Click Generation** | Depth capture to terrain generation to object placement in a single flow |
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Depth Capture | Intel RealSense D455, Python SDK |
+| 3D Environment | Unity 2022, C# |
+| Communication | UDP socket protocol |
+| Terrain Algorithm | Gaussian stamping, heightmap-based deformation |
+| VR | Unity XR / VR headset integration |
+| Hardware Control | RC excavator with dual-signal remote |
+
+## Awards
+
+* **Merit Award** - COMSTRUCTION Project, Gyeonggi Content Agency, Aug. 2025
+
+* ## Research Context
+
+* This project explores the intersection of:
+* * Physical-virtual terrain synchronization for quantitative evaluation
+  * * Mixed-reality interaction with tangible interfaces
+    * * Real-time sensor-driven simulation
+     
+      * **Full paper manuscript in preparation: "Physical-Virtual Terrain Synchronization System for Quantitative Evaluation of Excavation Simulation"**
+     
+      * ## Getting Started
+     
+      * ### Prerequisites
+      * * Intel RealSense D455 depth camera
+        * * Unity 2022.x with XR plugin
+          * * Python 3.10+ with RealSense SDK
+            * * VR headset (optional for full experience)
+             
+              * ```bash
+                git clone https://github.com/sejun42/COMSTRUCTION.git
+                cd COMSTRUCTION
+                pip install -r requirements.txt
+                ```
+
+                ## Contact
+
+                * **Sejun Yoon** - sejun1324@gmail.com
+                * * GitHub: @sejun42
+                  * 
